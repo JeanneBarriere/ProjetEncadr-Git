@@ -1,0 +1,29 @@
+---V0---
+________
+
+  Fichiers
+  --------
+    Pour les fichiers html :
+      - une page index (acceil du site)
+      - Une page paramètre
+      - une page jeu
+
+
+    Pour les fichiers css :
+      - un fichier pour le plateau de jeu
+      - un fichier pour l'ensemble du site
+
+    Pour les fichiers js :
+      - un fichier pour la création du plateau de jeu (pour pouvoir changer la taille facilement)
+      - un fichier pour les conditions de victoires
+      - un fichier nouvelle partie (lancement et reinitialisation)
+      - un fichier déroulement de la partie => alternance des tours et vérification des conditions de victoires
+      - un fichier jouer dans une colonne
+      - un fichier modifications des paramètres (en V0 juste les couleurs de jetons)?
+
+  Affichage et animations
+  -----------------------
+
+  - Quand on survole, afficher le pion qui sera ajouté
+  - Un son est jouer quand on pose un jetons
+  - 
