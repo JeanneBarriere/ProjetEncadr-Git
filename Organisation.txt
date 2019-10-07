@@ -25,5 +25,5 @@ ________
   -----------------------
 
   - Quand on survole, afficher le pion qui sera ajouté
-  - Un son est jouer quand on pose un jetons
+  - Un son est jouer quand on pose un jeton
   - 
