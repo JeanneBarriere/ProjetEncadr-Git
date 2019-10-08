@@ -2,6 +2,11 @@ var tab = [[0,0,0,0,0,0], [0,0,0,0,0,0], [0,0,0,0,0,0], [0,0,0,0,0,0],[0,0,0,0,0
 var compteur = 1;
 var colonne;
 var ligne;
+var joueur;
+var nbjetonspourgagner = 4; //Il faut aligner 4 jetons pour un puissance 4 classique
+const MAX_COL = 6;  //WARNING : Imposer à l'utilisateur que le nombre de colonnes doit être impair sinon le fichier win.js ne peut pas être juste
+                  //Ici l'utilisateur demande 7 colonnes donc MAX_COL vaut 6 (car dans un tableau le premier element est 0)
+const MAX_LI = 5; //Ici l'utilisateur demande 6 lignes donc MAX_LI vaut 5 (car dans un tableau le premier element est 0)
 
 function play (i){
   if (compteur%2 == 0){
@@ -25,7 +30,7 @@ function playJ2 (i){
 
 function column(column){
     let lign;
-    for (var i = 0; i<6 ; i++){
+    for (var i = 0; i<MAX_COL ; i++){
       if (tab[column][i]!=0){
         continue;
       }else{
@@ -36,6 +41,7 @@ function column(column){
       ligne = lign;
       colonne = column;
       return lign;
+     
     }
 
     var a=document.getElementById('a');
