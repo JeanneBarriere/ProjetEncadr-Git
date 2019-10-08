@@ -10,7 +10,7 @@ ________
 
 
     Pour les fichiers css :
-      - un fichier pour le plateau de jeu
+      - un fichier pour le plateau de jeu 
       - un fichier pour l'ensemble du site
 
     Pour les fichiers js :
