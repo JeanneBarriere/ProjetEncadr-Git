@@ -11,7 +11,7 @@ class Puissance4 {
     this.moves = 0;
     this.winner = null;
     this.element = document.querySelector(element_id);
-    this.element.addEventListener('click', (event) => this.handle_click(event));
+    this.element.addEventListener('click', (event) => handle_click(event,p4));
     this.render();
   }
 
@@ -30,3 +30,4 @@ class Puissance4 {
     this.element.innerHTML = '';
     this.element.appendChild(table);
   }}
+  let p4 = new Puissance4('#game');
