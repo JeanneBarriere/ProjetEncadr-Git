@@ -4,10 +4,35 @@
          url('font/Aaargh-webfont.woff') format('woff'),
          url('font/Aaargh-webfont.ttf') format('truetype'),
          url('font/Aaargh-webfont.svg') format('svg');}
-@font-face {
-    font-family: 'Amatic';
+
+@font-face {font-family: 'Amatic';
     src: url('font/AmaticSC-Regular.ttf') format('truetype');}
 
+
+
+#game table {
+  border: solid 1px #4683AB;
+  background-color: #5eb4ed;
+  cursor: pointer;
+  box-shadow: -10px 10px 7px #226C9D;
+}
+#game td {
+  height: 50px;
+  width: 50px;
+  border: solid 1px #4683AB;
+  border-radius: 100%;
+  background-color: #99D1F6;
+  box-shadow: inset 3px 3px 3px #8CBDDE;
+
+}
+#game td.player1 {
+  background-color: #c92626;
+  box-shadow: inset 3px 3px 3px #961f1f;
+}
+#game td.player2 {
+  background-color:#f2eb30;
+  box-shadow: inset 3px 3px 3px #d8d22b;
+}
 
 html, body {
   height: 100%;
@@ -32,7 +57,6 @@ header {
   box-shadow: 0px 1px 3px #EFE9EE;
   z-index: 10;
   position: relative;
-  font-size: 12px;
 }
 
 header h1 {
@@ -119,24 +143,6 @@ display: flex;
 }
 
 
-article table{
-  border: solid 1px #4683AB;
-  background-color: #5eb4ed;
-  transform: rotate(270deg);
-  cursor: pointer;
-  box-shadow: -10px 10px 7px #226C9D;
-}
-
-article table td {
-  height: 50px;
-  width: 50px;
-  border: solid 1px #4683AB;
-  border-radius: 100%;
-  background-color: #99D1F6;
-  box-shadow: inset 3px 3px 3px #8CBDDE;
-
-}
-
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -177,14 +183,4 @@ footer {
   z-index: 7;
   position: relative;
   box-shadow: 0px -1px 3px #EFE9EE;
-}
-
-.j1{
-  background-color: #c92626;
-  box-shadow: inset 3px 3px 3px #961f1f;
-}
-
-.j2{
-  background-color:#f2eb30;
-  box-shadow: inset 3px 3px 3px #d8d22b;
 }
