@@ -31,7 +31,7 @@ function handle_click(event,p4) {
           window.alert("Victoire du premier joueur !!");
           break;
         case 2:
-          window.alert("Victoire du seconde joueur !!");
+          window.alert("Victoire du second joueur !!");
           break;
       }
     }
