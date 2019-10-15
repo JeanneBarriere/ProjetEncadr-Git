@@ -1,0 +1,24 @@
+{
+  "name": "ProjetEncadreGit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "column.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeanneBarriere/ProjetEncadreGit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeanneBarriere/ProjetEncadreGit/issues"
+  },
+  "homepage": "https://github.com/JeanneBarriere/ProjetEncadreGit#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0"
+  }
+}
