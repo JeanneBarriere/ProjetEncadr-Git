@@ -5,8 +5,8 @@
   box-shadow: -10px 10px 7px #226C9D;
 }
 #game td {
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   border: solid 1px #4683AB;
   border-radius: 100%;
   background-color: #99D1F6;
@@ -20,4 +20,12 @@
 #game td.player2 {
   background-color:#f2eb30;
   box-shadow: inset 3px 3px 3px #d8d22b;
+}
+
+.play1{
+  margin : 30px
+}
+
+.play2{
+  margin : 30px
 }
