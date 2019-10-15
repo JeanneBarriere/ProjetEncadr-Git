@@ -1,20 +1,23 @@
 #game table {
-    border: 3px blue outset;
-    background-color: blue;
+  border: solid 1px #4683AB;
+  background-color: #5eb4ed;
+  cursor: pointer;
+  box-shadow: -10px 10px 7px #226C9D;
 }
 #game td {
-    width: 2cm;
-    height: 2cm;
-    margin: 0px;
-    padding: 0px;
-    border: 2px blue inset;
-    border-radius: 2cm;
-    background-color: white;
-    cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border: solid 1px #4683AB;
+  border-radius: 100%;
+  background-color: #99D1F6;
+  box-shadow: inset 3px 3px 3px #8CBDDE;
+
 }
 #game td.player1 {
-    background-color: red;
+  background-color: #c92626;
+  box-shadow: inset 3px 3px 3px #961f1f;
 }
 #game td.player2 {
-    background-color: yellow;
+  background-color:#f2eb30;
+  box-shadow: inset 3px 3px 3px #d8d22b;
 }
