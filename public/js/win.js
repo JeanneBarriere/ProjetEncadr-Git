@@ -22,7 +22,6 @@ function win(row, column, player, p4) {
   count = 0;
   shift = row + column;
   for (let i = Math.max(shift - p4.cols + 1, 0); i < Math.min(p4.rows, shift + 1); i++) {
-    console.log(i,shift-i,shift)
     count = (p4.board[i][shift - i] == player) ? count+1 : 0;
     if (count >= 4) return true;
   }

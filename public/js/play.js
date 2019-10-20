@@ -12,10 +12,12 @@ function handle_click(event,p4) {
     let row = play(parseInt(column),p4);
     if (row === null) {
       window.alert("La colonne est pleine!");
+      // ajouter ici la fonction null qui verifie si toute les coolonnes sont pleines pour partie nulle
     } else {
       if (win(row, column, p4.turn, p4)) {
         p4.winner = p4.turn;
       } else if (p4.moves >= p4.rows * p4.columns) {
+        alert(hi);
         p4.winner = 0;
       }
 

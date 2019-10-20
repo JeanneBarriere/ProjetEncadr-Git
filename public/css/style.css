@@ -103,7 +103,6 @@ header ul {
 
 
 article {
-height: 80%;
 margin: 0% 10% 0% 10%;
 align-self: center;
 background-color: white;
@@ -113,6 +112,7 @@ box-shadow: 1px 0px 3px #EFE9EE, -1px 0px 3px #EFE9EE;
 justify-content: space-around;
 align-items: center;
 display: flex;
+padding: 20px;
 }
 
 
