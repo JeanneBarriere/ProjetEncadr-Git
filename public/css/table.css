@@ -23,9 +23,20 @@
 }
 
 .play1{
-  margin : 30px
+  margin : 30px;
+  color : #c92626;
+
 }
 
 .play2{
-  margin : 30px
+  margin : 30px;
+  color : #f2eb30;
+}
+
+.play{
+  font-family: 'berkshire';
+  background-color: #99D1F6;
+  padding: 20px;
+  border : solid 1px #4683AB;
+  border-radius: 1em;
 }
