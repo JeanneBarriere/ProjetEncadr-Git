@@ -1,3 +1,7 @@
+#table {
+  display: flex;
+}
+
 #game table {
   border: solid 1px #4683AB;
   background-color: #5eb4ed;
@@ -11,15 +15,76 @@
   border-radius: 100%;
   background-color: #99D1F6;
   box-shadow: inset -3px -3px 3px #8CBDDE;
-
 }
-#game td.player1 {
+
+#game td.player11 {
   background-color: #c92626;
   box-shadow: inset -3px -3px 3px #961f1f;
 }
-#game td.player2 {
-  background-color:#f2eb30;
+
+#game td.player12 {
+  background-color: #BF49BB;
+  box-shadow: inset -3px -3px 3px #7B2F78;
+}
+
+#game td.player13 {
+  background-color: #F88C36;
+  box-shadow: inset -3px -3px 3px #985A28;
+}
+
+#game td.player14 {
+  background-color: #8BDD32;
+  box-shadow: inset -3px -3px 3px #4E7621;
+}
+
+#game td.player15 {
+  background-color:  #4298EC;
+  box-shadow: inset -3px -3px 3px #2B5986;
+}
+
+#game td.player16 {
+  background-color: #f2eb30;
   box-shadow: inset -3px -3px 3px #d8d22b;
+}
+
+#game td.player21 {
+  background-color: #c92626;
+  box-shadow: inset -3px -3px 3px #961f1f;
+}
+
+#game td.player22 {
+  background-color: #BF49BB;
+  box-shadow: inset -3px -3px 3px #7B2F78;
+}
+
+#game td.player23 {
+  background-color: #F88C36;
+  box-shadow: inset -3px -3px 3px #985A28;
+}
+
+#game td.player24 {
+  background-color: #8BDD32;
+  box-shadow: inset -3px -3px 3px #4E7621;
+}
+
+#game td.player25 {
+  background-color:  #4298EC;
+  box-shadow: inset -3px -3px 3px #2B5986;
+}
+
+#game td.player26 {
+  background-color: #f2eb30;
+  box-shadow: inset -3px -3px 3px #d8d22b;
+}
+
+.play{
+  font-family: 'Amatic';
+  background-color: #99D1F6;
+  padding: 20px;
+  border : solid 1px #4683AB;
+  border-radius: 1em;
+  font-size: 3em;
+  width: 15%;
 }
 
 .play1{
@@ -33,10 +98,10 @@
   color : #f2eb30;
 }
 
-.play{
-  font-family: 'berkshire';
-  background-color: #99D1F6;
-  padding: 20px;
-  border : solid 1px #4683AB;
-  border-radius: 1em;
+
+.jeton td {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  padding: 10px;
 }

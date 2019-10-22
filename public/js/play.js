@@ -1,8 +1,7 @@
 function handle_click(event,p4) {
   if (p4.winner !== null) {
     if (window.confirm("Partie terminée!\n\n Vous voulez recommencer?")) {
-      reset(p4);
-      render(p4);
+      newpart();
     }
     return;
   }
@@ -12,28 +11,24 @@ function handle_click(event,p4) {
     let row = play(parseInt(column),p4);
     if (row === null) {
       window.alert("La colonne est pleine!");
-      // ajouter ici la fonction null qui verifie si toute les coolonnes sont pleines pour partie nulle
+      // ajouter ici la fonction null qui verifie si toute les coolonnes sont pleines pour partie nulle, modifie la variable winner pour lancer la nouvelle partie
     } else {
       if (win(row, column, p4.turn, p4)) {
         p4.winner = p4.turn;
-      } else if (p4.moves >= p4.rows * p4.columns) {
-        alert(hi);
-        p4.winner = 0;
       }
-
       p4.turn = 3 - p4.turn;
-
-      render(p4)
+     render(p4);
+     counter ++;
+     showCounter(counter);
 
       switch (p4.winner) {
-        case 0:
-          window.alert("Partie nulle!!");
-          break;
         case 1:
-          window.alert("Victoire du premier joueur !!");
+        var resultElem = document.getElementById("win");
+        resultElem.textContent = "Victoire du premier joueur"
           break;
         case 2:
-          window.alert("Victoire du second joueur !!");
+          var resultElem = document.getElementById("win");
+          resultElem.textContent = "Victoire du second joueur"
           break;
       }
     }
@@ -52,8 +47,6 @@ function reset(p4) {
 }
 
 function set(row, column, player, p4) {
-  // On colore la case
   p4.board[row][column] = player;
-  // On compte le coup
   p4.moves++;
 }

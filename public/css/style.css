@@ -93,7 +93,7 @@ header ul {
 
 
 article {
-margin: 0% 10% 0% 10%;
+margin: 0% 8% 0% 8%;
 align-self: center;
 background-color: white;
 z-index: 5;
@@ -103,8 +103,17 @@ justify-content: space-around;
 align-items: center;
 display: flex;
 padding: 20px;
+padding-top: 20px;
+flex-direction : column;
 }
 
+article h1{
+  font-size: 1.5em;
+  color : #f95f2d;
+  font-family: 'Gloria';
+  padding: 0px;
+  margin: 0px;
+}
 
 nav {
   display: flex;

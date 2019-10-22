@@ -23,12 +23,17 @@ class Puissance4 {
         let td = tr.appendChild(document.createElement('td'));
         let colour = p4.board[i][j];
         if (colour)
-          td.className = 'player' + colour;
+        if(colour==1)
+        td.className = 'player' +1+ j1color;
+        if(colour==2)
+          td.className = 'player' +2+ j2color;
         td.dataset.column = j;
       }
     }
     p4.element.innerHTML = '';
     p4.element.appendChild(table);
   }
+  let j1color = 1;
+  let j2color = 6;
   let p4 = new Puissance4('#game');
   render(p4);

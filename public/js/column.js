@@ -1,5 +1,4 @@
 function play(column,p4) {
-  // Trouver la première case libre dans la colonne
   let row;
   for (let i = 0; i < p4.rows; i++) {
     if (p4.board[i][column] == 0) {
