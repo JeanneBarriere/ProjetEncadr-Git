@@ -7,8 +7,8 @@ function handle_click(event,p4) {
   }
   let column = event.target.dataset.column;
   if (column !== undefined) {
-    column = parseInt(column);
-    let row = play(parseInt(column),p4);
+    //column = parseInt(column);
+    let row = play(column,p4);
     if (row === null) {
       window.alert("La colonne est pleine!");
       // ajouter ici la fonction null qui verifie si toute les coolonnes sont pleines pour partie nulle, modifie la variable winner pour lancer la nouvelle partie
