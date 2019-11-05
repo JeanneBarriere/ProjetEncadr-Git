@@ -18,15 +18,20 @@ function handle_click(event,p4) {
      render(p4);
      counter ++;
      showCounter(counter);
-
+     var audio = new Audio('sound/jeton.mp3');
+     audio.play();
       switch (p4.winner) {
         case 1:
         var resultElem = document.getElementById("win");
-        resultElem.textContent = "Victoire du premier joueur"
+        resultElem.textContent = "Victoire du premier joueur";
+        var victoire = new Audio('sound/victoire.mp3');
+        victoire.play();
           break;
         case 2:
           var resultElem = document.getElementById("win");
-          resultElem.textContent = "Victoire du second joueur"
+          resultElem.textContent = "Victoire du second joueur";
+          var victoire = new Audio('sound/victoire.mp3');
+          victoire.play();
           break;
       }
     }
