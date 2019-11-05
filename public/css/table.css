@@ -81,27 +81,35 @@
   font-family: 'Amatic';
   background-color: #99D1F6;
   padding: 20px;
+  margin :30px;
   border : solid 1px #4683AB;
   border-radius: 1em;
   font-size: 3em;
   width: 15%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
-
-.play1{
-  margin : 30px;
-  color : #c92626;
-
-}
-
-.play2{
-  margin : 30px;
-  color : #f2eb30;
-}
-
 
 .jeton td {
   height: 20px;
   width: 20px;
   border-radius: 100%;
   padding: 10px;
+}
+
+#newpart {
+  display: none;
+  z-index: 100;
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	width: 200px;
+	height: 200px;
+	margin-left: -100px; /* Cette valeur doit être la moitié négative de la valeur du width */
+	margin-top: -100px;
+  background-color: white;
+  border : solid 2px black;/* Cette valeur doit être la moitié négative de la valeur du height */
 }
