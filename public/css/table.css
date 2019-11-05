@@ -107,9 +107,21 @@
 	left: 50%;
 	top: 50%;
 	width: 200px;
-	height: 200px;
-	margin-left: -100px; /* Cette valeur doit être la moitié négative de la valeur du width */
+	height: 100px;
+	margin-left: -100px;
 	margin-top: -100px;
-  background-color: white;
-  border : solid 2px black;/* Cette valeur doit être la moitié négative de la valeur du height */
+  background-color: #00509b;
+  color: white;
+  border : solid 2px white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+}
+
+#ok{
+  cursor: pointer;
+  border-radius: 100%;
+  border : solid 2px white;
+  padding: 5px;
 }

@@ -5,6 +5,7 @@ function newpart(){
   resultElem.textContent = "Partie en cours...";
   var resultElem = document.getElementById("counter");
   resultElem.textContent = "Nombre de tours : 0";
+  document.getElementById("newpart").style.display ="none";
   return;
 
 }
