@@ -38,7 +38,7 @@ function handle_click(event,p4) {
         case 3:
           var resultElem = document.getElementById("win");
           resultElem.textContent = "Partie nulle";
-          var victoire = new Audio('sound/victoire.mp3');
+          var victoire = new Audio('sound/nulle.mp3');
           victoire.play();
 
       }
