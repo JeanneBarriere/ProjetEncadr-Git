@@ -1,9 +1,7 @@
 function handle_click(event,p4) {
-  if (p4.winner !== null) {
-    if (window.confirm("Partie terminée!\n\n Vous voulez recommencer?")) {
-      newpart();
-    }
-    return;
+ if (p4.winner !== null) {
+    document.getElementById("newpart").style.display ="flex";
+   return;
   }
   let column = event.target.dataset.column;
   if (column !== undefined) {
