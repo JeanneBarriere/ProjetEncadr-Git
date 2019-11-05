@@ -5,7 +5,7 @@ function handle_click(event,p4) {
   }
   let column = event.target.dataset.column;
   if (column !== undefined) {
-    //column = parseInt(column);
+    column = parseInt(column);
     let row = play(column,p4);
 
     if (row === null) {
