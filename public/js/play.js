@@ -7,6 +7,7 @@ function handle_click(event,p4) {
   if (column !== undefined) {
     //column = parseInt(column);
     let row = play(column,p4);
+
     if (row === null) {
       window.alert("La colonne est pleine!");
       // ajouter ici la fonction null qui verifie si toute les coolonnes sont pleines pour partie nulle, modifie la variable winner pour lancer la nouvelle partie
@@ -20,6 +21,7 @@ function handle_click(event,p4) {
      showCounter(counter);
      var audio = new Audio('sound/jeton.mp3');
      audio.play();
+     tabplein(p4);
       switch (p4.winner) {
         case 1:
         var resultElem = document.getElementById("win");
@@ -33,6 +35,12 @@ function handle_click(event,p4) {
           var victoire = new Audio('sound/victoire.mp3');
           victoire.play();
           break;
+        case 3:
+          var resultElem = document.getElementById("win");
+          resultElem.textContent = "Partie nulle";
+          var victoire = new Audio('sound/victoire.mp3');
+          victoire.play();
+
       }
     }
   }
