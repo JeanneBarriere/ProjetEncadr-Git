@@ -6,6 +6,7 @@ function newpart(){
   var resultElem = document.getElementById("counter");
   resultElem.textContent = "Nombre de tours : 0";
   document.getElementById("newpart").style.display ="none";
+  counter = 0;
   return;
 
 }
