@@ -1,0 +1,11 @@
+Voici un rapport des bugs : 
+
+Problème avec la musique de fond qui se relance à chaque fois
+	Si ce dernier est corrigé, un autre bug surgit (celui de la boite de dialogues)
+
+Design du site qui se casse avec la redimension de la fenetre 
+
+
+Problème général, bien qui ne déclenche aucun bug : 
+
+Variables locales et globales
