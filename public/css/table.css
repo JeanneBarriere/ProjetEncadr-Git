@@ -8,6 +8,7 @@
   cursor: pointer;
   box-shadow: -10px 10px 7px #226C9D;
 }
+
 #game td {
   height: 70px;
   width: 70px;
@@ -16,45 +17,63 @@
   background-color: #99D1F6;
   box-shadow: inset -3px -3px 3px #8CBDDE;
 }
+
 #game td:hover{
   background-color: lightgray;	
 }
+
+#game tr:hover{
+	background-color: lightgray;
+}
+
 #game td.player11:hover {
   cursor: crosshair;
 }
+
 #game td.player12:hover {
 cursor: crosshair;
-}#game td.player13:hover {
-cursor: crosshair;
-
-}#game td.player14:hover {
-cursor: crosshair;
-
-}#game td.player15:hover {
-cursor: crosshair;
-
-}#game td.player16:hover {
-cursor: crosshair;
-
-}#game td.player21:hover {
-cursor: crosshair;
-
-}#game td.player22:hover {
-cursor: crosshair;
-
-}#game td.player23:hover {
-cursor: crosshair;
-
-}#game td.player24:hover {
-cursor: crosshair;
-
-}#game td.player25:hover {
-cursor: crosshair;
-
-}#game td.player26:hover {
-cursor: crosshair;
-
 }
+
+#game td.player13:hover {
+cursor: crosshair;
+}
+
+#game td.player14:hover {
+cursor: crosshair;
+}
+
+#game td.player15:hover {
+cursor: crosshair;
+}
+
+#game td.player16:hover {
+cursor: crosshair;
+}
+
+#game td.player21:hover {
+cursor: crosshair;
+}
+
+#game td.player22:hover {
+cursor: crosshair;
+}
+
+#game td.player23:hover {
+cursor: crosshair;
+}
+
+#game td.player24:hover {
+cursor: crosshair;
+}
+
+#game td.player25:hover {
+cursor: crosshair;
+}
+
+#game td.player26:hover {
+cursor: crosshair;
+}
+
 #game td.player11 {
   background-color: #c92626;
   box-shadow: inset -3px -3px 3px #961f1f;

@@ -12,6 +12,7 @@ class Puissance4 {
     this.winner = null;
     this.element = document.querySelector(element_id);
     this.element.addEventListener('click', (event) => handle_click(event,p4));	
+	// this.element=addEventListener('mouseover', (event) => handle_mouseover(event,p4)) ; 
   }}
 
   function render(p4) {

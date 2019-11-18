@@ -1,11 +1,11 @@
 function handle_click(event,p4) {
- if (p4.winner !== null) {
-    document.getElementById("newpart").style.display ="flex";
-   return;
+ if (p4.winner !== (null)) {
+    window.document.getElementById("newpart").style.display = "flex" ;
+	return ;
   }
   let column = event.target.dataset.column;
   if (column !== undefined) {
-    let row = play(column,p4);
+    let row = play(column, p4);
 
     if (row === null) {
       window.alert("La colonne est pleine!");
@@ -13,7 +13,7 @@ function handle_click(event,p4) {
       if (win(row, column, p4.turn, p4)) {
         p4.winner = p4.turn;
       }
-      p4.turn = 3 - p4.turn;
+      p4.turn = ((3) - p4.turn) ;
      render(p4);
      counter ++;
      showCounter(counter);
