@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function handle_click(event,p4) {
  if (p4.winner !== null) {
     document.getElementById("newpart").style.display ="flex";
@@ -48,16 +49,22 @@ function handle_click(event,p4) {
 
 
 function reset(p4) {
+=======
+function play(column,p4) {
+  let row;
+>>>>>>> 4e1e9eaf6981a9b47c72596c9b579989f2b5c4b3
   for (let i = 0; i < p4.rows; i++) {
-    for (let j = 0; j < p4.cols; j++) {
-      p4.board[i][j] = 0;
+    if (p4.board[i][column] == 0) {
+      row = i;
+      break;
     }
   }
-  p4.move = 0;
-  p4.winner = null;
-}
-
-function set(row, column, player, p4) {
-  p4.board[row][column] = player;
-  p4.moves++;
+  if (row === undefined) {
+    return null;
+  } else {
+    // Effectuer le coup
+    set(row, column, p4.turn, p4);
+    // Renvoyer la ligne où on a joué
+    return row;
+  }
 }
