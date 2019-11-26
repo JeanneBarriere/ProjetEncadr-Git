@@ -20,7 +20,7 @@ function handle_click(event,p4) {
      var audio = new Audio('sound/jeton.mp3');
      audio.play();
      tabplein(p4);
-     let first = 0 ; 
+     let first = 0 ;
       switch (p4.winner) {
         case 1:
         var resultElem = document.getElementById("win");
@@ -42,9 +42,9 @@ function handle_click(event,p4) {
 	  break;
 	default:
 	  first++ ;
-	  const musique = new Audio('sound/cours.mp3') ; 
+	  const musique = new Audio('sound/cours.mp3') ;
 	  if (counter === 1 && first === 1) {
-  	  	musique.play() ;
+  	  	//musique.play() ;
 	  }
 	  break;
       }
