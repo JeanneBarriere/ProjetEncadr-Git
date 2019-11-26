@@ -1,16 +1,19 @@
 function purple1(){
   j1color = 2;
   render(p4);
+  document.getElementById("j1").style.color = "#BF49BB";
 }
 
 function yellow1(){
   j1color = 6;
   render(p4);
+  document.getElementById("j1").style.color = "#4298EC";
 }
 
 function orange1(){
   j1color = 3;
   render(p4);
+  document.getElementById("j1").style.color = "#985A28";
 }
 
 function green1(){
