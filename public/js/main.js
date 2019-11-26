@@ -3,7 +3,7 @@
   let j2color = 6;
   let element_id = '#game' ;
   let rows = 6 ;
-  let cols = 7 ;
+  var cols = 7 ;
   let p4 = new Puissance4('#game', rows, cols);
   render(p4);
 
@@ -20,3 +20,31 @@
       document.getElementById('activateSound').style.display='block';
       musique.pause() ;
   }
+
+function plusC(){
+  cols++;
+  console.log(cols);
+  p4 = new Puissance4('#game', rows, cols);
+  //render(p4);
+}
+
+function minusC(){
+  cols--;
+  console.log(cols);
+  p4 = new Puissance4('#game', rows, cols);
+  render(p4);
+}
+
+function plusL(){
+  rows++;
+  console.log(cols);
+  p4 = new Puissance4('#game', rows, cols);
+  render(p4);
+}
+
+function minusL(){
+  rows--;
+  console.log(cols);
+  p4 = new Puissance4('#game', rows, cols);
+  render(p4);
+}
