@@ -185,3 +185,10 @@ cursor: crosshair;
   border : solid 2px white;
   padding: 5px;
 }
+
+.nombreDeCases{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  flex-wrap: wrap;
+}
