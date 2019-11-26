@@ -137,19 +137,20 @@ cursor: crosshair;
 }
 
 .play{
-  font-family: 'Amatic';
+  font-family: 'Gloria';
   background-color: #99D1F6;
   padding: 20px;
   margin :30px;
   border : solid 1px #4683AB;
   border-radius: 1em;
-  font-size: 3em;
+  font-size: 2em;
   width: 15%;
   cursor: pointer;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
+  text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
 }
 
 .jeton td {
