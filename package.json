@@ -1,9 +1,8 @@
 {
   "name": "ProjetEncadreGit",
   "version": "1.0.0",
-  "main": "column.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "main": "index.js",
+    "scripts": {"start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +17,8 @@
   "homepage": "https://github.com/JeanneBarriere/ProjetEncadreGit#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^3.1.0"
+    "express-handlebars": "^3.1.0",
+    "start": "^5.1.0"
   },
   "devDependencies": {},
   "description": "Projet encadré - Puissance 4"

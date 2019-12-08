@@ -2,6 +2,11 @@ const express = require('express');
 const hbs = require('express-handlebars');
 const app = express();
 
+const path = require('path')
+const PORT = process.env.PORT || 5000
+
+
+
 app.use(express.static('public'));
 
 app.engine('hbs', hbs({
@@ -29,6 +34,5 @@ app.get('/*', function (req, res) {
   res.sendStatus(404);
 })
 
-app.listen(4000, function () {
-  console.log('Application qui écoute sur le port 4000!');
-})
+
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
