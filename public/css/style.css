@@ -98,7 +98,7 @@ align-self: center;
 background-color: white;
 z-index: 5;
 position: relative;
-min-height: 100%;
+min-height: 80%;
 box-shadow: 1px 0px 3px #EFE9EE, -1px 0px 3px #EFE9EE;
 justify-content: space-around;
 align-items: center;

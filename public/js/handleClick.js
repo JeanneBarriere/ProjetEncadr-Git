@@ -39,14 +39,7 @@ function handle_click(event,p4) {
           resultElem.textContent = "Partie nulle";
           var victoire = new Audio('sound/nulle.mp3');
           victoire.play();
-	  break;
-	default:
-	  first++ ;
-	  const musique = new Audio('sound/cours.mp3') ;
-	  if (counter === 1 && first === 1) {
-  	  	//musique.play() ;
-	  }
-	  break;
+	      break;
       }
     }
   }

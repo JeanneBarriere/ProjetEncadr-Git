@@ -44,6 +44,14 @@ app.get('/customPart', function (req, res) {
   res.render('customPart.hbs', data);
 });
 
+app.get('/playVsIA', function (req, res) {
+  let data = {
+    title: 'Partie contre IA',
+  }
+  res.render('playVsIA.hbs', data);
+});
+
+
 app.get('/*', function (req, res) {
   res.sendStatus(404);
 })
