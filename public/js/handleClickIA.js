@@ -41,7 +41,7 @@ function handle_click(event,p4) {
           break;
         case 2:
           var resultElem = document.getElementById("win");
-          resultElem.textContent = "Victoire du second joueur";
+          resultElem.textContent = "Victoire de l'ordinateur";
           var victoire = new Audio('sound/victoire.mp3');
           victoire.play();
           break;
@@ -60,6 +60,7 @@ function handle_click(event,p4) {
        }
 
 function IA(Puissance4){
+  if(p4.turn==2){
   let column = getRandomInt(cols);
   let row = play(column, p4);
   if (row === null) {
@@ -84,7 +85,7 @@ function IA(Puissance4){
       break;
       case 2:
       var resultElem = document.getElementById("win");
-      resultElem.textContent = "Victoire du second joueur";
+      resultElem.textContent = "Victoire de l'ordinateur";
       var victoire = new Audio('sound/victoire.mp3');
       victoire.play();
       break;
@@ -96,4 +97,5 @@ function IA(Puissance4){
       break;
     }
   }
+}
 }
