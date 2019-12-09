@@ -54,8 +54,8 @@ function handle_click(event,p4) {
          }
        }
 
+       setTimeout(IA, 500);
      }
-     setTimeout(IA, 500);
    }
        }
 
@@ -63,9 +63,10 @@ function IA(Puissance4){
   if(p4.turn==2){
   let column = getRandomInt(cols);
   let row = play(column, p4);
-  if (row === null) {
+  while (row === null) {
     column = getRandomInt(cols);
-  } else {
+    row = play(column, p4);
+  }
     if (win(row, column, p4.turn, p4)) {
       p4.winner = p4.turn;
     }
@@ -97,5 +98,4 @@ function IA(Puissance4){
       break;
     }
   }
-}
 }

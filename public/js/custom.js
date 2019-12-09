@@ -23,19 +23,19 @@ function minusL(){
 function plusJ(){
   player++;
   if(player>6)player=6;
-  showResultRows(player);
+  showResultPlayer(player);
 }
 
 function minusJ(){
   player--;
   if(player<2)player=2;
-  showResultRows(player);
+  showResultPlayer(player);
 }
 
 function showResultCols(cols)
 {
   var resultElem = document.getElementById("cols");
-  resultElem.textContent = "Nombre de joueurs : "+cols.toString();
+  resultElem.textContent = "Nombre de colonnes : "+cols.toString();
 }
 
 function showResultRows(rows)
@@ -44,8 +44,8 @@ function showResultRows(rows)
   resultElem.textContent = "Nombre de lignes : "+rows.toString();
 }
 
-function showResultRows(player)
+function showResultPlayer(player)
 {
   var resultElem = document.getElementById("player");
-  resultElem.textContent = "Nombre de lignes : "+player.toString();
+  resultElem.textContent = "Nombre de joueurs : "+player.toString();
 }
