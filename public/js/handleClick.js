@@ -34,7 +34,7 @@ function handle_click(event,p4) {
           var victoire = new Audio('sound/victoire.mp3');
           victoire.play();
           break;
-        case 3:
+        case 10:
           var resultElem = document.getElementById("win");
           resultElem.textContent = "Partie nulle";
           var victoire = new Audio('sound/nulle.mp3');

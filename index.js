@@ -18,16 +18,30 @@ app.set('view engine', 'hbs');
 
 app.get('', function (req, res) {
   let data = {
-    title: 'Index',
+    title: 'Accueil',
   }
   res.render('index.hbs', data);
 });
 
-app.get('/nouvelle_partie', function (req, res) {
+app.get('/index', function (req, res) {
   let data = {
-    title: 'Nouvelle_Partie',
+    title: 'Accueil',
+  }
+  res.render('index.hbs', data);
+});
+
+app.get('/play', function (req, res) {
+  let data = {
+    title: 'Partie standart',
   }
   res.render('play.hbs', data);
+});
+
+app.get('/customPart', function (req, res) {
+  let data = {
+    title: 'Partie personnalisée',
+  }
+  res.render('customPart.hbs', data);
 });
 
 app.get('/*', function (req, res) {

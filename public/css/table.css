@@ -136,6 +136,26 @@ cursor: crosshair;
   box-shadow: inset -3px -3px 3px #d8d22b;
 }
 
+#game td.player3 {
+  background-color: #8BDD32;
+  box-shadow: inset -3px -3px 3px #4E7621;
+}
+
+#game td.player4 {
+  background-color: #4298EC;
+  box-shadow: inset -3px -3px 3px #2B5986;
+}
+
+#game td.player5 {
+  background-color: #F88C36;
+  box-shadow: inset -3px -3px 3px #985A28;
+}
+
+#game td.player6 {
+  background-color:#BF49BB;
+  box-shadow: inset -3px -3px 3px #7B2F78;
+}
+
 .play{
   font-family: 'Gloria';
   background-color: #99D1F6;
@@ -184,11 +204,4 @@ cursor: crosshair;
   border-radius: 100%;
   border : solid 2px white;
   padding: 5px;
-}
-
-.nombreDeCases{
-  display: flex;
-  flex-direction: column;
-  align-self: flex-end;
-  flex-wrap: wrap;
 }

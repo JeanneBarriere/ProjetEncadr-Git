@@ -1,0 +1,42 @@
+
+<body>
+<div id="newpart">
+  <p>Nouvelle partie ?</p>
+  <p id="ok" onclick="newpart()">OK</p>
+</div>
+<article id="">
+    <h1 id="counter">Nombre de tours : 0</h1>
+    <h1 id="win">Partie en cours...</h1>
+    <div id="game">
+        Veuillez activer javascript pour jouer.
+    </div>
+  <div id="custom">
+    <h1>Personnalisez votre partie</h1>
+    <div>
+      <h2>
+        <div class="flex" >
+          <i onclick="minusJ()" class="fas fa-minus cursor"></i><i onclick="plusJ()" class="fas fa-plus cursor"></i><strong id='player' >Nombre de joueurs : 2</strong>
+        </div>
+        <br>
+        <div class="flex" >
+          <i onclick="minusC()" class="fas fa-minus cursor"></i><i class="fas fa-plus cursor" onclick="plusC()"></i><strong id='cols' >Nombre de colonnes : 7</strong>
+        </div>
+        <br>
+        <div class="flex" >
+          <i onclick="minusL()" class="fas fa-minus cursor"></i><i onclick="plusL()" class="fas fa-plus cursor"></i><strong id='rows' >Nombre de lignes : 6</strong>
+        </div>
+      </div>
+      </h2>
+    <p onclick="validate()" id="validate">Valider</p>
+  </div>
+</article>
+<script src="js/win.js"></script>
+<script src="js/play.js"></script>
+<script src="js/tabplein.js"></script>
+<script src="js/set.js"></script>
+<script src="js/render.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/mainCustomPart.js"></script>
+<script src="js/colorX.js"></script>
+<script src="js/showCounter.js"></script>
+</body>

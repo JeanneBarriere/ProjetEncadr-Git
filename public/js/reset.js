@@ -6,7 +6,4 @@ function reset(p4) {
   }
   p4.move = 0;
   p4.winner = null;
-  // Pour regler probleme musique ajouter : musique.stop();
-  // ok mais probleme : affichage de boite dialogue
-  // necessite debuggage mais aussi variables locales et globales visibles et justes pour ne plus interferer 
 }
