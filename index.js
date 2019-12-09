@@ -20,7 +20,7 @@ app.get('', function (req, res) {
   let data = {
     title: 'Index',
   }
-  res.render('play.hbs', data);
+  res.render('index.hbs', data);
 });
 
 app.get('/nouvelle_partie', function (req, res) {
