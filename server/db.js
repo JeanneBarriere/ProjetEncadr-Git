@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 const project_name = 'project';
 const user_name = 'user_project_';
+const __PASSWORD__ = require('../config/pwd.js');
+const pwd = encodeURIComponent(__PASSWORD__);
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://JeanneBarriere:123Soleil!@projete-qhusr.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://JeanneBarriere:"+ pwd +"@projete-qhusr.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
