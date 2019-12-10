@@ -44,6 +44,10 @@
     </div>
   </div>
   </div>
+  {{# if user}}
+      <p id='save'>Enregistrez votre partie</p>
+  {{ else }}
+  {{/if}}
 </article>
 <script src="js/win.js"></script>
 <script src="js/play.js"></script>
@@ -57,4 +61,5 @@
 <script src="js/main.js"></script>
 <script src="js/colorX.js"></script>
 <script src="js/showCounter.js"></script>
+<script src="/js/save.js"></script>
 </body>

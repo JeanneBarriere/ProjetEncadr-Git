@@ -1,8 +1,9 @@
 {
   "name": "ProjetEncadreGit",
   "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {"start": "node index.js"
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -16,8 +17,16 @@
   },
   "homepage": "https://github.com/JeanneBarriere/ProjetEncadreGit#readme",
   "dependencies": {
+    "ajax": "0.0.4",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "local": "^0.3.3",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.8.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "session": "^0.1.0",
     "start": "^5.1.0"
   },
   "devDependencies": {},
