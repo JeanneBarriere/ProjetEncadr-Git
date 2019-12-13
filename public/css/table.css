@@ -24,9 +24,7 @@
   box-shadow: inset -3px -3px 3px #3c5b6d;
 }
 
-#game tr:hover{
-	background-color: #4483aa;
-}
+
 
 #game td.player11:hover {
   cursor: crosshair;

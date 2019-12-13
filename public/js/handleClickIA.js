@@ -71,7 +71,6 @@ function IA(Puissance4){
     let rowIA = play(parseInt(columnIA), p4IA);
     if(rowIA == null) continue;
     if (winIA(parseInt(rowIA), parseInt(columnIA), 2, p4IA, 4)){
-      alert('win');
       column = columnIA;
       row = rowIA;
       break;
@@ -87,7 +86,6 @@ function IA(Puissance4){
       let rowIA = play(parseInt(columnIA), p4IA);
       if(rowIA == null) continue;
       if (winIA(parseInt(rowIA), parseInt(columnIA), 1, p4IA, 4)){
-        alert('lost');
         column = columnIA;
         row = rowIA;
         break;
