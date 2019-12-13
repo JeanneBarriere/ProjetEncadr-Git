@@ -18,11 +18,11 @@ function handle_click(event,p4) {
   }
   let column = event.target.dataset.column;
   if (column !== undefined) {
-    let row = play(column, p4);
+    let row = play(parseInt(column), p4);
     if (row === null) {
       window.alert("La colonne est pleine!");
     } else {
-      if (win(row, column, p4.turn, p4)) {
+      if (win(row, parseInt(column), p4.turn, p4)) {
         p4.winner = p4.turn;
       }
       p4.turn = ((3) - p4.turn) ;
@@ -60,12 +60,50 @@ function handle_click(event,p4) {
        }
 
 function IA(Puissance4){
+  if(p4.winner==(null)){
   if(p4.turn==2){
-  let column = getRandomInt(cols);
-  let row = play(column, p4);
-  while (row === null) {
+  let column = null;
+  let row = null;
+  for(var i =0; i<p4.cols; i++){
+    let p4IA = new Puissance4IA(p4);
+    p4IA.turn = 2;
+    let columnIA = i;
+    let rowIA = play(parseInt(columnIA), p4IA);
+    if(rowIA == null) continue;
+    if (winIA(parseInt(rowIA), parseInt(columnIA), 2, p4IA, 4)){
+      alert('win');
+      column = columnIA;
+      row = rowIA;
+      break;
+    }
+  }
+
+  if(column == null && row ==null){
+    for(var i =0; i<p4.cols; i++){
+
+      let p4IA = new Puissance4IA(p4);
+      p4IA.turn = 1;
+      let columnIA = parseInt(i);
+      let rowIA = play(parseInt(columnIA), p4IA);
+      if(rowIA == null) continue;
+      if (winIA(parseInt(rowIA), parseInt(columnIA), 1, p4IA, 4)){
+        alert('lost');
+        column = columnIA;
+        row = rowIA;
+        break;
+      }
+    }
+  }
+
+ if(column == null && row ==null){
+   column = getRandomInt(cols);
+   row = play(column, p4);
+   while (row === null) {
     column = getRandomInt(cols);
     row = play(column, p4);
+  }
+  } else {
+    play(column, p4);
   }
     if (win(row, column, p4.turn, p4)) {
       p4.winner = p4.turn;
@@ -98,4 +136,5 @@ function IA(Puissance4){
       break;
     }
   }
+}
 }

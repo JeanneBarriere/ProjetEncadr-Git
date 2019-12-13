@@ -28,3 +28,34 @@ function win(row, column, player, p4) {
 
   return false;
 }
+
+function winIA(row, column, player, Puissance4IA, nbjeton) {
+  // Horizontal
+  let count = 0;
+  for (let j = 0; j < Puissance4IA.cols; j++) {
+    count = (Puissance4IA.board[row][j] == player) ? count+1 : 0;
+    if (count >= nbjeton) return true;
+  }
+  // Vertical
+  count = 0;
+  for (let i = 0; i < Puissance4IA.rows; i++) {
+    count = (Puissance4IA.board[i][column] == player) ? count+1 : 0;
+    if (count >= nbjeton) return true;
+  }
+  // Diagonal
+  count = 0;
+  let shift = row - column;
+  for (let i = Math.max(shift, 0); i < Math.min(Puissance4IA.rows, Puissance4IA.cols + shift); i++) {
+    count = (Puissance4IA.board[i][i - shift] == player) ? count+1 : 0;
+    if (count >= nbjeton) return true;
+  }
+  // Anti-diagonal
+  count = 0;
+  shift = row + column;
+  for (let i = Math.max(shift - Puissance4IA.cols + 1, 0); i < Math.min(Puissance4IA.rows, shift + 1); i++) {
+    count = (Puissance4IA.board[i][shift - i] == player) ? count+1 : 0;
+    if (count >= nbjeton) return true;
+  }
+
+  return false;
+}
