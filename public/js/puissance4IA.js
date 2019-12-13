@@ -1,6 +1,6 @@
 class Puissance4IA {
 
-  constructor(Puissance4) {
+  constructor(Puissance4I) {
     this.rows = Puissance4.rows;
     this.cols = Puissance4.cols;
     this.board = Array(this.rows);
@@ -12,5 +12,4 @@ class Puissance4IA {
       this.board[i][j] = Puissance4.board[i][j];
     }
     this.turn = 2;
-
   }}
