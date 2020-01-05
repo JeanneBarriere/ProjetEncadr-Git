@@ -24,56 +24,6 @@
   box-shadow: inset -3px -3px 3px #3c5b6d;
 }
 
-
-
-#game td.player11:hover {
-  cursor: crosshair;
-}
-
-#game td.player12:hover {
-cursor: crosshair;
-}
-
-#game td.player13:hover {
-cursor: crosshair;
-}
-
-#game td.player14:hover {
-cursor: crosshair;
-}
-
-#game td.player15:hover {
-cursor: crosshair;
-}
-
-#game td.player16:hover {
-cursor: crosshair;
-}
-
-#game td.player21:hover {
-cursor: crosshair;
-}
-
-#game td.player22:hover {
-cursor: crosshair;
-}
-
-#game td.player23:hover {
-cursor: crosshair;
-}
-
-#game td.player24:hover {
-cursor: crosshair;
-}
-
-#game td.player25:hover {
-cursor: crosshair;
-}
-
-#game td.player26:hover {
-cursor: crosshair;
-}
-
 #game td.player11 {
   background-color: #c92626;
   box-shadow: inset -3px -3px 3px #961f1f;
