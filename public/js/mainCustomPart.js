@@ -22,7 +22,6 @@
         this.winner = null;
         this.element = document.querySelector(element_id);
         this.element.addEventListener('click', (event) => handle_click(event,p4));
-    	// this.element=addEventListener('mouseover', (event) => handle_mouseover(event,p4)) ;
       }}
 
       function handle_click(event,p4) {
@@ -43,8 +42,7 @@
             p4.turn = p4.turn+1 ;
             if (p4.turn > player) p4.turn = 1;
            render(p4);
-           counter ++;
-           showCounter(counter);
+           showCounter(p4);
            var audio = new Audio('sound/jeton.mp3');
            audio.play();
            tabplein(p4);
@@ -93,12 +91,6 @@
                 victoire.play();
       	  break;
       	default:
-      	  first++ ;
-      	  const musique = new Audio('sound/cours.mp3') ;
-      	  if (counter === 1 && first === 1) {
-        	  	//musique.play() ;
-      	  }
-      	  break;
             }
           }
         }
@@ -122,9 +114,7 @@
         var resultElem = document.getElementById("counter");
         resultElem.textContent = "Nombre de tours : 0";
         document.getElementById("newpart").style.display ="none";
-        counter = 0;
         return;
-
       });
 
 

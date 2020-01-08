@@ -25,7 +25,6 @@ passport.use(new LocalStrategy(
         if (user.password != password){
           return done(null, false);
         }
-        console.log('test');
         return done(null, user);
       });
   }

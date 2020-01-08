@@ -1,4 +1,6 @@
 var save = document.getElementById('save');
+
+var pseudo = document.getElementById('pseudo').textContent;
 let colsdb = p4.cols;
 let rowsdb = p4.rows;
 let turndb = p4.turn;
@@ -24,10 +26,9 @@ save.addEventListener("click",  async function(p4){
   var board = boarddb;
   var moves = movesdb;
   ajax.post('/createP4',
-  {cols,rows,turn,moves,board},
+  {cols,rows,turn,moves,board,pseudo},
   function(response){
     alert('partie enregistrée !!')
-    document.location.href="/index";
   },
   function(){
     alert('erreur');

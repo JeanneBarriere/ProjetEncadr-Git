@@ -9,3 +9,11 @@ router.post('/createP4', async function (req, res){
   await db.createP4(req.body);
   res.send('success');
 });
+
+router.post('/findP4', async function (req, res){
+  var pseudo = req.body;
+  const result = await db.P4.findOne(pseudo);
+  console.log('result :',result);
+  console.log('board :',result.board);
+  res.send(result);
+});

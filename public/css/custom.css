@@ -33,7 +33,7 @@ transition: all 0.2s;
 
 }
 
-#validate{
+.validate{
   cursor: pointer;
   font-family: 'Gloria';
   padding: 10px;
@@ -46,7 +46,7 @@ transition: all 0.2s;
   transition: all 0.5s;
 }
 
-#validate:hover{
+.validate:hover{
   color:#5eb4ed;
   background-color: #f95f2d;
   border : solid 2px #5eb4ed;

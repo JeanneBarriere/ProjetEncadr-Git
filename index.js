@@ -99,6 +99,14 @@ app.get('/confirmedRegistration', function (req, res) {
   res.render('confirmedRegistration.hbs', data);
 });
 
+app.get('/save', function (req, res) {
+  let data = {
+    title: 'Partie personnalisée',
+    user:req.user,
+  }
+  res.render('save.hbs', data);
+});
+
 app.get('/*', function (req, res) {
   res.sendStatus(404);
 })

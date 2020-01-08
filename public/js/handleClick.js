@@ -15,8 +15,7 @@ function handle_click(event,p4) {
       }
       p4.turn = ((3) - p4.turn) ;
      render(p4);
-     counter ++;
-     showCounter(counter);
+     showCounter(p4);
      var audio = new Audio('sound/jeton.mp3');
      audio.play();
      tabplein(p4);

@@ -50,28 +50,43 @@ async function removeUser(id) {
   console.log("L'utilisateur a été supprimé :"+result);
 }
 
+
 const p4Schema = new mongoose.Schema({
 	rows: Number,
 	cols: Number,
 	board : Array,
 	turn: Number,
 	moves: Number,
+  pseudo: String,
 });
 const P4 = mongoose.model('P4', p4Schema);
 
 async function createP4(p4Data) {
-  console.log('testp4');
+  var puissance = await findP4(p4Data.pseudo);
+  console.log(puissance);
+  await removeP4(p4Data.pseudo);
 	const p4 = new P4({
     rows : p4Data.rows,
     cols : p4Data.cols,
     board : p4Data.board,
     turn : p4Data.turn,
     moves : p4Data.moves,
+    pseudo : p4Data.pseudo,
 	})
 	const result = await p4.save();
 	console.log(result);
 };
 
+async function removeP4(pseudo) {
+  const result = await P4.deleteOne({pseudo: pseudo});
+  // indicates the number of deleted documents
+  console.log("Sauvegarde a été supprimé :"+result);
+}
+
+async function findP4(pseudo){
+  const result = await P4.findOne({"pseudo": pseudo});
+  return result;
+}
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
  .then(function() {
 	 console.log('now connected to mongodb!');
@@ -80,4 +95,4 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 	 console.log ("Erreur lors de la connection à mongodb : ", err);
  })
 
- module.exports = {createUser,getUsers,removeUser,User, createP4, P4};
+ module.exports = {createUser,getUsers,removeUser,User, createP4, P4, findP4};
