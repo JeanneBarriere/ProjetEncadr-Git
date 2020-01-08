@@ -19,22 +19,24 @@ function handle_click(event,p4) {
      var audio = new Audio('sound/jeton.mp3');
      audio.play();
      tabplein(p4);
-     let first = 0 ;
       switch (p4.winner) {
         case 1:
         var resultElem = document.getElementById("win");
         resultElem.textContent = "Victoire du premier joueur";
+        window.document.getElementById("save").style.display = "none" ;
         var victoire = new Audio('sound/victoire.mp3');
         victoire.play();
           break;
         case 2:
           var resultElem = document.getElementById("win");
           resultElem.textContent = "Victoire du second joueur";
+          window.document.getElementById("save").style.display = "none" ;
           var victoire = new Audio('sound/victoire.mp3');
           victoire.play();
           break;
         case 10:
           var resultElem = document.getElementById("win");
+          window.document.getElementById("save").style.display = "none" ;
           resultElem.textContent = "Partie nulle";
           var victoire = new Audio('sound/nulle.mp3');
           victoire.play();
