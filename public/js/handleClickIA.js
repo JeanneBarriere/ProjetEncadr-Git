@@ -94,7 +94,20 @@ function IA(Puissance4){
   }
 
  if(column == null && row ==null){
-   column = getRandomInt(cols);
+   let w = 0;
+   while(w==0){
+     alert('test');
+     let columnIA = getRandomInt(cols);
+     let p4IA = new Puissance4IA(p4);
+     p4IA.turn = 2;
+     let rowIA = play(parseInt(columnIA), p4IA);
+     if(rowIA == null) continue;
+     p4IA.turn = 1;
+     play(parseInt(columnIA), p4IA);
+     if (!(winIA(parseInt(rowIA), parseInt(columnIA), 1, p4IA, 4))) w=1;
+     column = columnIA;
+   }
+
    row = play(column, p4);
    while (row === null) {
     column = getRandomInt(cols);
