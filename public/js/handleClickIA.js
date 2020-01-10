@@ -64,6 +64,10 @@ async function handle_click(event,p4) {
        }
 
 async function IA(Puissance4){
+  if (p4.winner !== (null)) {
+     window.document.getElementById("newpart").style.display = "flex" ;
+ 	return ;
+   }
   if(p4.winner==(null)){
   if(p4.turn==2){
   let column = null;
@@ -97,8 +101,27 @@ async function IA(Puissance4){
     }
   }
 
+  if(column == null && row ==null){
+    for(var i =0; i<p4.cols; i++){
+      let p4IA = new Puissance4IA(p4);
+      p4IA.turn = 1;
+      let columnIA = parseInt(i);
+      let rowIA = play(parseInt(columnIA), p4IA);
+      if(rowIA == null) continue;
+      if (winIA(parseInt(rowIA), parseInt(columnIA), 1, p4IA, 3)){
+        p4IA = 2;
+        play(parseInt(columnIA), p4IA);
+        if (!(winIA(parseInt(rowIA), parseInt(columnIA), 1, p4IA, 4))){
+          column = columnIA;
+          break;
+        }
+      }
+    }
+  }
+
  if(column == null && row ==null){
    let w = 0;
+   let row;
    while(w==0){
      let columnIA = getRandomInt(cols);
      let p4IA = new Puissance4IA(p4);
@@ -106,19 +129,15 @@ async function IA(Puissance4){
      let rowIA = play(parseInt(columnIA), p4IA);
      if(rowIA == null) continue;
      p4IA.turn = 1;
-     play(parseInt(columnIA), p4IA);
+     rowIA = play(parseInt(columnIA), p4IA);
      if (!(winIA(parseInt(rowIA), parseInt(columnIA), 1, p4IA, 4))) w=1;
      column = columnIA;
+     row = rowIA;
    }
+ }
 
    row = play(column, p4);
-   while (row === null) {
-    column = getRandomInt(cols);
-    row = play(column, p4);
-  }
-  } else {
-    play(column, p4);
-  }
+
     if (win(row, column, p4.turn, p4)) {
       p4.winner = p4.turn;
     }

@@ -6,4 +6,5 @@ function reset(p4) {
   }
   p4.move = 0;
   p4.winner = null;
+  p4.turn = 1;
 }
