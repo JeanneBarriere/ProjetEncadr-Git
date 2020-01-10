@@ -1,4 +1,6 @@
-function handle_click(event,p4) {
+
+
+async function handle_click(event,p4) {
  if (p4.winner !== (null)) {
     window.document.getElementById("newpart").style.display = "flex" ;
 	return ;
@@ -14,6 +16,10 @@ function handle_click(event,p4) {
         p4.winner = p4.turn;
       }
       p4.turn = ((3) - p4.turn) ;
+      for(var i=0 ; i<6 ; i++){
+        anime(p4, row, column,i);
+        await pause(25);
+      }
      render(p4);
      showCounter(p4);
      var audio = new Audio('sound/jeton.mp3');

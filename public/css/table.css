@@ -153,3 +153,45 @@
   border : solid 2px white;
   padding: 5px;
 }
+
+#game td.anime0 {
+  height: 77px;
+  width: 77px;
+  opacity: 20%;
+}
+
+#game td.anime1 {
+  height: 76px;
+  width: 76px;
+  opacity: 30%;
+}
+
+#game td.anime2 {
+  height: 75px;
+  width: 75px;
+  opacity: 40%;
+}
+
+#game td.anime3 {
+  height: 74px;
+  width: 74px;
+  opacity: 60%;
+}
+
+#game td.anime4 {
+  height: 73px;
+  width: 73px;
+  opacity: 70%;
+}
+
+#game td.anime5 {
+  height: 72px;
+  width: 72px;
+  opacity: 80%;
+}
+
+#game td.anime6 {
+  height: 71px;
+  width: 71px;
+  opacity: 90%;
+}

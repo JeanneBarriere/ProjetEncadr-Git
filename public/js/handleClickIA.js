@@ -10,7 +10,7 @@ function sleep(milliseconds) {
   } while (currentDate - date < milliseconds);
 }
 
-function handle_click(event,p4) {
+async function handle_click(event,p4) {
   if(p4.turn==1){
  if (p4.winner !== (null)) {
     window.document.getElementById("newpart").style.display = "flex" ;
@@ -26,6 +26,10 @@ function handle_click(event,p4) {
         p4.winner = p4.turn;
       }
       p4.turn = ((3) - p4.turn) ;
+      for(var i=0 ; i<6 ; i++){
+        anime(p4, row, column,i);
+        await pause(25);
+      }
      render(p4);
      counter ++;
      showCounter(p4);
@@ -59,7 +63,7 @@ function handle_click(event,p4) {
    }
        }
 
-function IA(Puissance4){
+async function IA(Puissance4){
   if(p4.winner==(null)){
   if(p4.turn==2){
   let column = null;
@@ -96,7 +100,6 @@ function IA(Puissance4){
  if(column == null && row ==null){
    let w = 0;
    while(w==0){
-     alert('test');
      let columnIA = getRandomInt(cols);
      let p4IA = new Puissance4IA(p4);
      p4IA.turn = 2;
@@ -120,6 +123,10 @@ function IA(Puissance4){
       p4.winner = p4.turn;
     }
     p4.turn = ((3) - p4.turn) ;
+    for(var i=0 ; i<6 ; i++){
+      anime(p4, row, column,i);
+      await pause(25);
+    }
     render(p4);
     counter ++;
     showCounter(p4);

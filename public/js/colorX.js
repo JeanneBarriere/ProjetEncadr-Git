@@ -69,3 +69,8 @@ function red2(){
   render(p4);
   document.getElementById("j2").style.color = "#C92626";
 }
+
+function pause(ms)
+{
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
