@@ -126,6 +126,14 @@
   width: 20px;
   border-radius: 100%;
   padding: 10px;
+    transition: all 0.2s;
+}
+
+.jeton td:hover {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  padding: 10px;
 }
 
 #newpart {
