@@ -70,6 +70,8 @@ async function IA(Puissance4){
    }
   if(p4.winner==(null)){
   if(p4.turn==2){
+
+    //est-ce que IA gagne
   let column = null;
   let row = null;
   for(var i =0; i<p4.cols; i++){
@@ -85,6 +87,7 @@ async function IA(Puissance4){
     }
   }
 
+  //est-ce que joueur gagne
   if(column == null && row ==null){
     for(var i =0; i<p4.cols; i++){
 
@@ -101,6 +104,7 @@ async function IA(Puissance4){
     }
   }
 
+  // est-ce que joueur gagne 3
   if(column == null && row ==null){
     for(var i =0; i<p4.cols; i++){
       let p4IA = new Puissance4IA(p4);
@@ -109,19 +113,29 @@ async function IA(Puissance4){
       let rowIA = play(parseInt(columnIA), p4IA);
       if(rowIA == null) continue;
       if (winIA(parseInt(rowIA), parseInt(columnIA), 1, p4IA, 3)){
-        p4IA = 2;
-        play(parseInt(columnIA), p4IA);
-        if (!(winIA(parseInt(rowIA), parseInt(columnIA), 1, p4IA, 4))){
-          column = columnIA;
-          break;
+        let p4IA2 = new Puissance4IA(p4);
+        p4IA2.turn = 2;
+        play(parseInt(columnIA), p4IA2);
+        let test = 0;
+        for(var j =0; j<p4.cols; j++){
+          let p4IA3 = new Puissance4IA(p4);
+          p4IA3.turn = 1;
+          rowIA = play(parseInt(j), p4IA3);
+          if(rowIA == null) continue;
+          if ((winIA(parseInt(rowIA), parseInt(j), 1, p4IA3, 4))){
+          test = 1;
         }
       }
+      if (test == 1) contninue;
+      if (test == 0) column == columnIA;
     }
   }
+}
 
  if(column == null && row ==null){
    let w = 0;
    let row;
+   let cpt = 0;
    while(w==0){
      let columnIA = getRandomInt(cols);
      let p4IA = new Puissance4IA(p4);
@@ -130,13 +144,20 @@ async function IA(Puissance4){
      if(rowIA == null) continue;
      p4IA.turn = 1;
      rowIA = play(parseInt(columnIA), p4IA);
+      if(rowIA == null) continue;
      if (!(winIA(parseInt(rowIA), parseInt(columnIA), 1, p4IA, 4))) w=1;
      column = columnIA;
      row = rowIA;
+     if(cpt > 30) w=1;
+     cpt ++;
    }
  }
+ row = play(column, p4);
 
+ while (row == null) {
+   column = getRandomInt(cols);
    row = play(column, p4);
+ }
 
     if (win(row, column, p4.turn, p4)) {
       p4.winner = p4.turn;
