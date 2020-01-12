@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="css/table.css" />
   <link rel="stylesheet" href="css/font.css" />
   <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="css/logIn.css" />
-    <link rel="stylesheet" href="css/signIn.css" />
+  <link rel="stylesheet" href="/css/menuDeroulant.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/logIn.css" />
+  <link rel="stylesheet" href="css/signIn.css" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.min.js"></script>
   <script src="/js/ajax.js"></script>
@@ -23,9 +24,15 @@
      <h1>
        Puissance4
      </h1>
-    <ul id="menu">
+    <ul id="menu-deroulant">
       <li><a href="/index">Accueil</a></li>
-      <li onclick="newpart()"><a href="/play" >Nouvelle partie</a></li>
+      <li><a href="#" >Nouvelle partie</a>
+      <ul>
+          <li><a href='/playVsIA'>Contre IA</a></li>
+          <li><a href='/play'>2 joueurs</a></li>
+          <li><a href='/customPart'>Partie personnalisée</a></li>
+        </ul>
+      </li>
       <li id="activateSound"><a href="#" onclick="activateSound()"><i class="fas fa-volume-mute"></i></a></li>
       <li id="desactivedSound" style="display:none"><a href="#" onclick="desactivedSound()"><i class="fas fa-volume-up"></i></a></li>
       <li><a href="#"></a></li>

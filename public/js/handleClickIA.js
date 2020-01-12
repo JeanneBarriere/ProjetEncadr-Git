@@ -107,28 +107,31 @@ async function IA(Puissance4){
   // est-ce que joueur gagne 3
   if(column == null && row ==null){
     for(var i =0; i<p4.cols; i++){
-      let p4IA = new Puissance4IA(p4);
-      p4IA.turn = 1;
-      let columnIA = parseInt(i);
-      let rowIA = play(parseInt(columnIA), p4IA);
-      if(rowIA == null) continue;
-      if (winIA(parseInt(rowIA), parseInt(columnIA), 1, p4IA, 3)){
-        let p4IA2 = new Puissance4IA(p4);
-        p4IA2.turn = 2;
-        play(parseInt(columnIA), p4IA2);
-        let test = 0;
-        for(var j =0; j<p4.cols; j++){
-          let p4IA3 = new Puissance4IA(p4);
-          p4IA3.turn = 1;
-          rowIA = play(parseInt(j), p4IA3);
-          if(rowIA == null) continue;
-          if ((winIA(parseInt(rowIA), parseInt(j), 1, p4IA3, 4))){
-          test = 1;
+      if(column === null){
+        let p4IA = new Puissance4IA(p4);
+        p4IA.turn = 1;
+        let columnIA = parseInt(i);
+        let rowIA = play(parseInt(columnIA), p4IA);
+        if(rowIA == null) continue;
+        if (winIA(parseInt(rowIA), parseInt(columnIA), 1, p4IA, 3)){
+          let test = 0;
+          for(var j =0; j<p4.cols; j++){
+            let p4IA2 = new Puissance4IA(p4);
+            p4IA2.turn = 2;
+            play(parseInt(columnIA), p4IA2);
+            p4IA2.turn = 1;
+            rowIA = play(parseInt(j), p4IA2);
+            if(rowIA == null) continue;
+            if ((winIA(parseInt(rowIA), parseInt(j), 1, p4IA2, 4))){
+              test = 1;
+            }
+          }
+          if (test == 1) continue;
+          if (test == 0) {
+            column = columnIA;
+          }
         }
       }
-      if (test == 1) contninue;
-      if (test == 0) column == columnIA;
-    }
   }
 }
 
