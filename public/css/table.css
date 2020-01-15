@@ -155,11 +155,19 @@
   border-radius: 1em;
 }
 
-#ok{
+#ok {
   cursor: pointer;
   border-radius: 100%;
   border : solid 2px white;
   padding: 5px;
+  display: flex;
+  border-right: 3px;
+  border-left: 3px;
+}
+
+#ok a{
+  text-decoration: none;
+  color: white;
 }
 
 #game td.anime0 {

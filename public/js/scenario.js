@@ -10,6 +10,8 @@ function sleep(milliseconds) {
   } while (currentDate - date < milliseconds);
 }
 
+let level = 1;
+
 async function handle_click(event,p4) {
   if(p4.turn==1){
  if (p4.winner !== (null)) {
@@ -41,6 +43,7 @@ async function handle_click(event,p4) {
         var resultElem = document.getElementById("win");
         resultElem.textContent = "Victoire du premier joueur";
         var victoire = new Audio('sound/victoire.mp3');
+        level = (level <= 3) ? level+1 : 3 ;
         victoire.play();
           break;
         case 2:
@@ -67,25 +70,26 @@ async function IA(Puissance4){
   if (p4.winner !== (null)) {
      window.document.getElementById("newpart").style.display = "flex" ;
  	return ;
-  }
+   }
   if(p4.winner==(null)){
-    if(p4.turn==2){
+  if(p4.turn==2){
+  let column = null;
+  let row = null;
 
-      //est-ce que IA gagne
-    let column = null;
-    let row = null;
-    for(var i =0; i<p4.cols; i++){
-      let p4IA = new Puissance4IA(p4);
-      p4IA.turn = 2;
-      let columnIA = i;
-      let rowIA = play(parseInt(columnIA), p4IA);
-      if(rowIA == null) continue;
-      if (winIA(parseInt(rowIA), parseInt(columnIA), 2, p4IA, 4)){
-        column = columnIA;
-        row = rowIA;
-        break;
-      }
+  //est-ce que IA gagne
+  if(level>=2){
+  for(var i =0; i<p4.cols; i++){
+    let p4IA = new Puissance4IA(p4);
+    p4IA.turn = 2;
+    let columnIA = i;
+    let rowIA = play(parseInt(columnIA), p4IA);
+    if(rowIA == null) continue;
+    if (winIA(parseInt(rowIA), parseInt(columnIA), 2, p4IA, 4)){
+      column = columnIA;
+      row = rowIA;
+      break;
     }
+  }
 
   //est-ce que joueur gagne
   if(column == null && row ==null){
@@ -104,6 +108,7 @@ async function IA(Puissance4){
     }
   }
 
+  if(level >=3){
   // est-ce que joueur gagne 3
   if(column == null && row ==null){
     for(var i =0; i<p4.cols; i++){
@@ -149,13 +154,15 @@ async function IA(Puissance4){
      rowIA = play(parseInt(columnIA), p4IA);
       if(rowIA == null) continue;
      if (!(winIA(parseInt(rowIA), parseInt(columnIA), 1, p4IA, 4))) w=1;
-     column = columnIA;
      row = rowIA;
+     column = columnIA;
      if(cpt > 30) w=1;
      cpt ++;
    }
  }
  row = play(column, p4);
+}
+}
 
  while (row == null) {
    column = getRandomInt(cols);
@@ -181,6 +188,7 @@ async function IA(Puissance4){
       var resultElem = document.getElementById("win");
       resultElem.textContent = "Victoire du premier joueur";
       var victoire = new Audio('sound/victoire.mp3');
+      level = (level <= 3) ? level+1 : 3 ;
       victoire.play();
       break;
       case 2:
@@ -198,4 +206,18 @@ async function IA(Puissance4){
     }
   }
 }
+}
+
+function newpart(){
+  reset(p4);
+  render(p4);
+  var resultElem = document.getElementById("win");
+  resultElem.textContent = "Partie en cours...";
+  var resultElem = document.getElementById("counter");
+  resultElem.textContent = "Nombre de tours : 0";
+  document.getElementById("newpart").style.display ="none";
+  var leveltext = document.getElementById("level");
+  leveltext.textContent = "Niveau de l'IA : "+level;
+  window.document.getElementById("save").style.display = "flex" ;
+  return;
 }

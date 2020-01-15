@@ -107,6 +107,14 @@ app.get('/save', function (req, res) {
   res.render('save.hbs', data);
 });
 
+app.get('/scenario', function (req, res) {
+  let data = {
+    title: 'Scenario',
+    user:req.user,
+  }
+  res.render('scenario.hbs', data);
+});
+
 app.get('/*', function (req, res) {
   res.sendStatus(404);
 })

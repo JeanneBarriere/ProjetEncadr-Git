@@ -4,7 +4,7 @@ function reset(p4) {
       p4.board[i][j] = 0;
     }
   }
-  p4.move = 0;
+  p4.moves = 0;
   p4.winner = null;
   p4.turn = 1;
 }
