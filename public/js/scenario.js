@@ -43,7 +43,7 @@ async function handle_click(event,p4) {
         var resultElem = document.getElementById("win");
         resultElem.textContent = "Victoire du premier joueur";
         var victoire = new Audio('sound/victoire.mp3');
-        level = (level <= 3) ? level+1 : 3 ;
+        level = (level < 3) ? level+1 : 3 ;
         victoire.play();
           break;
         case 2:
